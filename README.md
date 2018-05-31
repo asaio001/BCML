@@ -1,6 +1,6 @@
 # BCML (Bytecode Manipulation Library)
 
-Minimalist libary written in C capable of directly interfacing with Java bytecode. 
+Minimalist library written in C capable of directly interfacing with Java bytecode. 
 Based on Oracle's VM specification of the Java class file format: https://docs.oracle.com/javase/specs/jvms/se7/html/jvms-4.html
 
 
