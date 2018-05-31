@@ -5,7 +5,8 @@ Based on Oracle's VM specification of the Java class file format: https://docs.o
 
 
 Parses a full Java class file into the following structure:
-```typedef struct {
+```
+typedef struct {
 	const_pool cpool;
 	unsigned short int minor_ver;
 	unsigned short int major_ver;
@@ -20,13 +21,15 @@ Parses a full Java class file into the following structure:
 	field_info *fields;
 	method_info *methods;
 	attr_info *attributes;
-} jclass;```
+} jclass;
+```
 
 ##Instruction parsing
 Bytecode instructions are encapsulated in an attribute_info structure (whose name_index corresponds to a UTF-8 entry in the constant pool of value "Code") inside of each method_info structure of a class that contains all of its executable instructions.
 
 At the moment, instruction parsing consists of just parsing the opcode of each instruction while skipping its payload. Which means that things like modifying unique attributes of an instruction are not yet able to be done. The extent of instruction support consists of something like the following code snippet: 
-```	jclass class;
+```
+	jclass class;
 	if (!read_class(&class, CLASS_FILE_NAME)) {
 		return 0;
 	}
@@ -47,7 +50,8 @@ At the moment, instruction parsing consists of just parsing the opcode of each i
 	if (!write_class(class, CLASS_FILE_NAME)) {
 		return 0;
 	}
-	dispose_class(&class);```
+	dispose_class(&class);
+```
 
 
 In the future I will hopefully implement an individual structure per instruction, and so the ability to modify each instruction's attributes at will.
@@ -79,5 +83,6 @@ A small code snippet showing a test case of the library that iterates through th
 		return 0;
 	}
 
-	dispose_class(&class);```
+	dispose_class(&class);
+```
 

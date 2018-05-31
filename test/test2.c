@@ -1,9 +1,8 @@
  /*
 Author: Abraham Saiovici
 
-Description: Test case of the Bytecode Manipulation Library (BCML) that iterates through the constant pool of a standard
-HelloWorld class, finds the UTF8 entry that matches the HELLO_WORLD constant, and replaces it with a 
-modified string, NEW_STRING.
+Description: Test case of the Bytecode Manipulation Library (BCML) that iterates through each of the loaded class' methods and
+prints out all of the opcode string of each instruction.
 
 */
 
