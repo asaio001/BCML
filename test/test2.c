@@ -2,7 +2,7 @@
 Author: Abraham Saiovici
 
 Description: Test case of the Bytecode Manipulation Library (BCML) that iterates through each of the loaded class' methods and
-prints out all of the opcode string of each instruction.
+prints out the opcode string of each instruction.
 
 */
 
