@@ -11,7 +11,7 @@ modified string, NEW_STRING.
 #include <stdlib.h>
 #include <string.h>
 
-#include "jclass.h"
+#include "../jclass.h"
 
 #define CLASS_FILE_NAME "HelloWorld.class"
 #define HELLO_WORLD "Hello World!"
