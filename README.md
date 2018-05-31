@@ -53,6 +53,19 @@ At the moment, instruction parsing consists of just parsing the opcode of each i
 	dispose_class(&class);
 ```
 
+Running it on a classic HelloWorld class gives the following output:
+```
+- Method: <init> ()V
+	 - aload_0
+	 - invokespecial
+	 - return
+- Method: main ([Ljava/lang/String;)V
+	 - getstatic
+	 - ldc
+	 - invokevirtual
+	 - return
+```
+
 
 In the future I will hopefully implement an individual structure per instruction, and so the ability to modify each instruction's attributes at will.
 
