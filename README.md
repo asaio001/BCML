@@ -27,7 +27,7 @@ typedef struct {
 ## Instruction parsing
 According to the VM spec, bytecode instructions are encapsulated in an attribute_info structure (whose name_index corresponds to a UTF-8 entry in the constant pool of value "Code") inside of each method_info structure of a class that contains all of its executable instructions.
 
-At the moment, instruction parsing consists of just parsing the opcode of each instruction while skipping its payload. Which means that things like modifying unique attributes of an instruction are not yet able to be done. The extent of instruction support consists of something like the following code snippet: 
+At the moment, instruction parsing consists of just parsing the opcode of each instruction while skipping its payload. This means that things like modifying unique attributes of an instruction are not yet able to be done. The extent of instruction support consists of something like the following code snippet: 
 ```
 	jclass class;
 	if (!read_class(&class, CLASS_FILE_NAME)) {
