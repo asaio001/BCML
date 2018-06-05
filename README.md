@@ -47,9 +47,6 @@ At the moment, instruction parsing consists of just parsing the opcode of each i
 		}
 	}
 
-	if (!write_class(class, CLASS_FILE_NAME)) {
-		return 0;
-	}
 	dispose_class(&class);
 ```
 

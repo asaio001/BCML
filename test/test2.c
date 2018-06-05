@@ -27,9 +27,6 @@ int main(int argc, char **argv)
 
 	print_instr(&class);
 
-	if (!write_class(class, CLASS_FILE_NAME)) {
-		return 0;
-	}
 	dispose_class(&class);
 
 	return 0;
